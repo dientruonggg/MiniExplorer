@@ -1,0 +1,21 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="MiniExplorer.UI.App"
+             xmlns:local="using:MiniExplorer.UI"
+             xmlns:converters="using:MiniExplorer.UI.Converters"
+             RequestedThemeVariant="Dark">
+
+    <Application.Resources>
+        <converters:FileIconConverter x:Key="FileIconConverter"/>
+        <converters:FolderColorConverter x:Key="FolderColorConverter"/>
+        <converters:IconConverter x:Key="IconConverter"/>
+    </Application.Resources>
+
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+  
+    <Application.Styles>
+        <FluentTheme />
+    </Application.Styles>
+</Application>
